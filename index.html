@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久产国品操拍 | 国货影像社区 · 拍出中国制造的好故事</title>
+<meta name="description" content="久产国品操拍是专注国货品牌影像创作的视频社区平台，汇聚创作者、品牌与工厂一线，用真实镜头记录中国品质的诞生过程，提供操拍教程、品牌合作与作品展映。">
+<style>
+  :root{
+    --ink:#14181f;
+    --ink-soft:#3d4653;
+    --paper:#f6f2ea;
+    --paper-2:#efe8da;
+    --cinnabar:#c0392b;
+    --cinnabar-deep:#9b2b20;
+    --gold:#b8893b;
+    --gold-soft:#d8b678;
+    --jade:#3f6b5a;
+    --line:rgba(20,24,31,.12);
+    --shadow:0 18px 48px rgba(20,24,31,.10);
+    --radius:14px;
+    --serif:"Songti SC","STSong","Noto Serif SC",Georgia,serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1180px,92vw);margin:0 auto;}
+  .serif{font-family:var(--serif);}
+  .eyebrow{
+    font-size:.72rem;
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--cinnabar);
+    font-weight:600;
+  }
+  .sec-title{
+    font-family:var(--serif);
+    font-size:clamp(1.7rem,3.4vw,2.6rem);
+    line-height:1.3;
+    letter-spacing:.04em;
+    font-weight:700;
+  }
+  .sec-lead{color:var(--ink-soft);max-width:56ch;margin-top:.9rem;font-size:1rem;}
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky;top:0;z-index:80;
+    background:rgba(246,242,234,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .brand{display:flex;align-items:center;gap:.7rem;}
+  .brand-mark{
+    width:40px;height:40px;border-radius:10px;
+    background:linear-gradient(140deg,var(--cinnabar) 0%,var(--cinnabar-deep) 70%);
+    display:grid;place-items:center;
+    box-shadow:0 6px 18px rgba(192,57,43,.32);
+  }
+  .brand-mark svg{width:22px;height:22px;}
+  .brand-name{font-family:var(--serif);font-size:1.12rem;font-weight:700;letter-spacing:.14em;}
+  .brand-sub{display:block;font-size:.58rem;letter-spacing:.3em;color:var(--ink-soft);font-family:var(--sans);font-weight:400;margin-top:1px;}
+  nav.links{display:flex;gap:2rem;font-size:.9rem;letter-spacing:.08em;}
+  nav.links a{position:relative;padding:.4rem 0;color:var(--ink-soft);transition:color .25s;}
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+    background:var(--cinnabar);transition:width .3s;
+  }
+  nav.links a:hover{color:var(--ink);}
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--ink);color:var(--paper);
+    padding:.62rem 1.25rem;border-radius:999px;
+    font-size:.85rem;letter-spacing:.12em;
+    transition:transform .25s,background .25s;
+  }
+  .nav-cta:hover{background:var(--cinnabar);transform:translateY(-2px);}
+  @media(max-width:860px){nav.links{display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:5.2rem 0 4rem;
+    background:
+      radial-gradient(900px 420px at 85% -10%,rgba(192,57,43,.10),transparent 62%),
+      radial-gradient(720px 380px at 0% 100%,rgba(184,137,59,.13),transparent 60%),
+      var(--paper);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(to right,rgba(20,24,31,.035) 1px,transparent 1px),
+      linear-gradient(to bottom,rgba(20,24,31,.035) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(ellipse at 50% 30%,#000 25%,transparent 78%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:3.4rem;align-items:center;
+  }
+  h1{
+    font-family:var(--serif);
+    font-size:clamp(2.9rem,7vw,5.6rem);
+    line-height:1.02;
+    letter-spacing:.06em;
+    font-weight:700;
+    margin:1.1rem 0 1.4rem;
+  }
+  h1 .accent{
+    color:var(--cinnabar);
+    position:relative;display:inline-block;
+  }
+  h1 .accent::after{
+    content:"";position:absolute;left:0;right:0;bottom:-6px;height:8px;
+    background:linear-gradient(90deg,var(--gold-soft),transparent);
+    border-radius:4px;
+  }
+  .hero-desc{
+    max-width:34rem;color:var(--ink-soft);font-size:1.05rem;
+  }
+  .hero-desc strong{color:var(--ink);}
+  .hero-actions{margin-top:2.1rem;display:flex;flex-wrap:wrap;gap:1rem;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    padding:.85rem 1.7rem;border-radius:10px;font-size:.95rem;letter-spacing:.1em;
+    transition:all .28s;border:1px solid transparent;cursor:pointer;font-family:inherit;
+  }
+  .btn-primary{background:var(--cinnabar);color:#fff;box-shadow:0 12px 30px rgba(192,57,43,.26);}
+  .btn-primary:hover{background:var(--cinnabar-deep);transform:translateY(-3px);}
+  .btn-ghost{border-color:rgba(20,24,31,.22);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);background:rgba(20,24,31,.04);transform:translateY(-3px);}
+  .hero-stats{
+    margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);padding-top:1.4rem;gap:1rem;
+  }
+  .stat b{font-family:var(--serif);font-size:1.75rem;letter-spacing:.02em;}
+  .stat span{display:block;font-size:.76rem;color:var(--ink-soft);letter-spacing:.16em;margin-top:2px;}
+
+  /* hero visual */
+  .hero-visual{position:relative;}
+  .film-frame{
+    position:relative;border-radius:18px;overflow:hidden;
+    background:#1a1f27;
+    box-shadow:var(--shadow);
+    aspect-ratio:4/3.05;
+  }
+  .film-frame svg{width:100%;height:100%;display:block;}
+  .frame-chip{
+    position:absolute;left:18px;top:18px;
+    background:rgba(20,24,31,.72);color:#f6f2ea;
+    font-size:.7rem;letter-spacing:.24em;padding:.4rem .8rem;border-radius:999px;
+    backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14);
+  }
+  .rec-dot{
+    display:inline-block;width:7px;height:7px;border-radius:50%;background:#e74c3c;
+    margin-right:.45rem;animation:blink 1.4s infinite;
+  }
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+  .takes-card{
+    position:absolute;right:-16px;bottom:-24px;
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:1rem 1.2rem;box-shadow:var(--shadow);width:210px;
+  }
+  .takes-card .t{font-size:.72rem;letter-spacing:.22em;color:var(--ink-soft);}
+  .takes-card .v{font-family:var(--serif);font-size:1.5rem;margin-top:.2rem;}
+  .takes-card .bar{height:6px;border-radius:4px;background:rgba(20,24,31,.1);margin-top:.7rem;overflow:hidden;}
+  .takes-card .bar i{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--cinnabar),var(--gold));border-radius:4px;}
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:2.6rem;}
+    .takes-card{right:8px;bottom:-18px;}
+  }
+
+  /* ---------- TICKER ---------- */
+  .ticker{
+    background:var(--ink);color:var(--paper-2);
+    padding:.95rem 0;overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.06);
+  }
+  .ticker-track{
+    display:flex;gap:3rem;white-space:nowrap;
+    animation:marquee 34s linear infinite;
+    font-family:var(--serif);letter-spacing:.18em;font-size:.92rem;
+  }
+  .ticker-track span{display:inline-flex;align-items:center;gap:1.2rem;}
+  .ticker-track span::before{content:"◈";color:var(--gold-soft);font-size:.8rem;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- SECTIONS COMMON ---------- */
+  section{padding:5rem 0;}
+  .sec-head{margin-bottom:2.6rem;}
+  .band{background:var(--paper-2);}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.4rem;align-items:start;}
+  .about-copy p{color:var(--ink-soft);margin-top:1.1rem;}
+  .about-copy p strong{color:var(--ink);}
+  .pillars{display:grid;gap:1rem;}
+  .pillar{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.4rem 1.5rem;display:flex;gap:1.1rem;align-items:flex-start;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .pillar:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .pillar .num{
+    font-family:var(--serif);font-size:1.05rem;color:var(--cinnabar);
+    border:1px solid rgba(192,57,43,.3);border-radius:8px;
+    width:42px;height:42px;display:grid;place-items:center;flex:none;
+  }
+  .pillar h4{font-size:1rem;letter-spacing:.06em;margin-bottom:.25rem;}
+  .pillar p{font-size:.88rem;color:var(--ink-soft);line-height:1.7;}
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ---------- FEATURE / 操拍工坊 ---------- */
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .card-media{aspect-ratio:16/10;background:#20262f;overflow:hidden;position:relative;}
+  .card-media svg{width:100%;height:100%;}
+  .card-tag{
+    position:absolute;left:12px;top:12px;
+    background:rgba(246,242,234,.92);color:var(--ink);
+    font-size:.68rem;letter-spacing:.18em;padding:.28rem .65rem;border-radius:999px;
+  }
+  .card-body{padding:1.3rem 1.4rem 1.5rem;flex:1;display:flex;flex-direction:column;}
+  .card-body h3{font-family:var(--serif);font-size:1.12rem;letter-spacing:.04em;margin-bottom:.5rem;}
+  .card-body p{font-size:.88rem;color:var(--ink-soft);flex:1;}
+  .card-meta{
+    margin-top:1rem;padding-top:.9rem;border-top:1px dashed var(--line);
+    display:flex;justify-content:space-between;font-size:.75rem;color:var(--ink-soft);letter-spacing:.08em;
+  }
+  .card-meta .who{color:var(--cinnabar);}
+  @media(max-width:960px){.feature-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:640px){.feature-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PROCESS ---------- */
+  .process{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:step;}
+  .step{
+    position:relative;padding:1.8rem 1.4rem 1.5rem;
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  }
+  .step::before{
+    counter-increment:step;content:"0" counter(step);
+    font-family:var(--serif);font-size:2.4rem;color:rgba(192,57,43,.18);
+    position:absolute;right:14px;top:6px;line-height:1;
+  }
+  .step h4{font-size:1rem;letter-spacing:.08em;margin-bottom:.5rem;}
+  .step p{font-size:.85rem;color:var(--ink-soft);}
+  @media(max-width:900px){.process{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.process{grid-template-columns:1fr;}}
+
+  /* ---------- WORKS / 展映 ---------- */
+  .works-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;}
+  .work{
+    position:relative;border-radius:12px;overflow:hidden;background:#1b212a;
+    aspect-ratio:3/4;box-shadow:0 10px 26px rgba(20,24,31,.12);
+    transition:transform .35s;
+  }
+  .work:hover{transform:scale(1.02);}
+  .work svg{width:100%;height:100%;}
+  .work-info{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:1.4rem 1rem .95rem;
+    background:linear-gradient(to top,rgba(10,13,18,.85),transparent);
+    color:#f6f2ea;
+  }
+  .work-info b{display:block;font-family:var(--serif);font-size:.98rem;letter-spacing:.05em;}
+  .work-info span{font-size:.7rem;letter-spacing:.16em;opacity:.75;}
+  @media(max-width:900px){.works-grid{grid-template-columns:1fr 1fr;}}
+
+  /* ---------- COMMUNITY ---------- */
+  .community-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.6rem;}
+  .thread{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:1.15rem 1.3rem;margin-bottom:.9rem;
+    display:flex;gap:1rem;align-items:flex-start;
+    transition:border-color .25s,transform .25s;
+  }
+  .thread:hover{border-color:rgba(192,57,43,.4);transform:translateX(4px);}
+  .avatar{
+    width:40px;height:40px;border-radius:50%;flex:none;
+    display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:.95rem;
+  }
+  .thread h5{font-size:.92rem;margin-bottom:.15rem;}
+  .thread p{font-size:.82rem;color:var(--ink-soft);}
+  .thread .time{font-size:.7rem;color:#9aa3ae;letter-spacing:.1em;margin-top:.35rem;display:block;}
+  .join-card{
+    background:linear-gradient(150deg,#1a1f27,#252c37);
+    color:var(--paper-2);border-radius:var(--radius);padding:2.2rem 1.9rem;
+    position:relative;overflow:hidden;
+  }
+  .join-card::after{
+    content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;
+    border-radius:50%;background:radial-gradient(circle,rgba(192,57,43,.4),transparent 70%);
+  }
+  .join-card h3{font-family:var(--serif);font-size:1.45rem;letter-spacing:.06em;margin-bottom:.7rem;}
+  .join-card p{font-size:.88rem;opacity:.78;position:relative;z-index:1;}
+  .join-list{list-style:none;margin:1.4rem 0 1.7rem;position:relative;z-index:1;}
+  .join-list li{
+    font-size:.85rem;padding:.45rem 0 .45rem 1.4rem;position:relative;opacity:.9;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .join-list li::before{content:"▹";position:absolute;left:0;color:var(--gold-soft);}
+  .join-card .btn-primary{position:relative;z-index:1;width:100%;}
+  @media(max-width:900px){.community-grid{grid-template-columns:1fr;}}
+
+  /* ---------- NUMBERS ---------- */
+  .numbers{
+    background:var(--ink);color:var(--paper-2);padding:4rem 0;
+  }
+  .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;}
+  .num-item b{
+    font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);
+    display:block;line-height:1.1;color:var(--gold-soft);
+  }
+  .num-item span{font-size:.78rem;letter-spacing:.22em;opacity:.7;}
+  @media(max-width:760px){.num-grid{grid-template-columns:1fr 1fr;gap:2.4rem;}}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;background:none;border:none;font-family:inherit;text-align:left;
+    padding:1.35rem .2rem;font-size:1rem;letter-spacing:.04em;cursor:pointer;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  }
+  .faq-q .ic{font-size:1.3rem;color:var(--cinnabar);transition:transform .3s;flex:none;}
+  .faq-item.open .faq-q .ic{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-a p{padding:0 .2rem 1.3rem;font-size:.9rem;color:var(--ink-soft);max-width:70ch;}
+
+  /* ---------- SUBSCRIBE ---------- */
+  .subscribe{
+    background:linear-gradient(135deg,var(--cinnabar-deep),var(--cinnabar) 55%,#a8331f);
+    color:#fff;border-radius:20px;padding:3.4rem 3rem;position:relative;overflow:hidden;
+    margin:2rem 0 5rem;
+  }
+  .subscribe::before{
+    content:"操拍";position:absolute;right:-10px;bottom:-46px;
+    font-family:var(--serif);font-size:11rem;opacity:.09;letter-spacing:.1em;line-height:1;
+  }
+  .subscribe h2{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:.06em;position:relative;}
+  .subscribe p{margin-top:.8rem;opacity:.86;max-width:48ch;position:relative;font-size:.95rem;}
+  .sub-form{
+    margin-top:1.9rem;display:flex;gap:.7rem;max-width:520px;position:relative;flex-wrap:wrap;
+  }
+  .sub-form input{
+    flex:1;min-width:220px;padding:.9rem 1.1rem;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.12);color:#fff;font-family:inherit;font-size:.92rem;outline:none;
+  }
+  .sub-form input::placeholder{color:rgba(255,255,255,.65);}
+  .sub-form input:focus{border-color:#fff;background:rgba(255,255,255,.2);}
+  .sub-form button{
+    padding:.9rem 1.8rem;border-radius:10px;border:none;background:#fff;color:var(--cinnabar-deep);
+    font-family:inherit;font-size:.92rem;letter-spacing:.1em;cursor:pointer;font-weight:600;
+    transition:transform .25s;
+  }
+  .sub-form button:hover{transform:translateY(-2px);}
+  .sub-msg{margin-top:.9rem;font-size:.82rem;opacity:.9;position:relative;min-height:1.2em;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#c8cdd5;padding:3.6rem 0 2rem;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2.4rem;}
+  .foot-brand p{font-size:.84rem;opacity:.65;margin-top:1rem;max-width:30ch;line-height:1.8;}
+  .foot-col h6{font-size:.78rem;letter-spacing:.24em;color:var(--gold-soft);margin-bottom:1rem;}
+  .foot-col a{display:block;font-size:.84rem;opacity:.68;padding:.28rem 0;transition:opacity .2s;}
+  .foot-col a:hover{opacity:1;color:#fff;}
+  .foot-bottom{
+    margin-top:2.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;
+    font-size:.75rem;opacity:.55;letter-spacing:.08em;
+  }
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="久产国品操拍首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="6" width="13" height="12" rx="2" stroke="#fff" stroke-width="1.6"/>
+          <path d="M16 10l5-3v10l-5-3" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="7" cy="10" r="1.3" fill="#fff"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">久产国品操拍</span>
+        <span class="brand-sub">GUOPIN SHOOT LAB</span>
+      </span>
+    </a>
+    <nav class="links" aria-label="主导航">
+      <a href="#about">关于我们</a>
+      <a href="#studio">操拍工坊</a>
+      <a href="#works">作品展映</a>
+      <a href="#community">创作者社区</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#subscribe">加入操拍</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">国货影像 · 真实记录</span>
+        <h1>久产<span class="accent">国品</span>操拍</h1>
+        <p class="hero-desc">
+          我们相信，好产品自己会说话，而<strong>操拍</strong>让它被听见。
+          久产国品操拍是一个面向国货品牌的影像创作与社区平台，
+          连接工厂一线、品牌主理人与独立导演，用镜头记录中国制造从原料到成品、
+          从车间到货架的完整旅程。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#studio">浏览操拍工坊 →</a>
+          <a class="btn btn-ghost" href="#works">观看展映作品</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>1,860+</b><span>入库操拍作品</span></div>
+          <div class="stat"><b>420 家</b><span>合作国货品牌</span></div>
+          <div class="stat"><b>36 期</b><span>年度操拍计划</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="film-frame">
+          <span class="frame-chip"><span class="rec-dot"></span>TAKE 08 · 车间光线</span>
+          <svg viewBox="0 0 640 488" role="img" aria-label="车间操拍取景器插画">
+            <defs>
+              <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2c333f"/>
+                <stop offset="1" stop-color="#171c24"/>
+              </linearGradient>
+              <linearGradient id="warm1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e0a34a" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#c0392b" stop-opacity=".2"/>
+              </linearGradient>
+              <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4d5665"/>
+                <stop offset="1" stop-color="#2b323c"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="488" fill="url(#sky1)"/>
+            <!-- 窗光 -->
+            <rect x="356" y="42" width="230" height="200" rx="6" fill="url(#warm1)" opacity=".55"/>
+            <g stroke="#e0a34a" stroke-width="1.4" opacity=".5">
+              <line x1="356" y1="108" x2="586" y2="108"/>
+              <line x1="356" y1="176" x2="586" y2="176"/>
+              <line x1="472" y1="42" x2="472" y2="242"/>
+            </g>
+            <!-- 光柱 -->
+            <polygon points="356,242 586,242 470,420 220,420" fill="#e0a34a" opacity=".07"/>
+            <!-- 地面 -->
+            <rect x="0" y="404" width="640" height="84" fill="#12161c"/>
+            <!-- 机台主体 -->
+            <rect x="60" y="196" width="196" height="180" rx="8" fill="url(#metal)"/>
+            <rect x="78" y="216" width="160" height="52" rx="4" fill="#131820"/>
+            <circle cx="96" cy="242" r="7" fill="#c0392b"/>
+            <circle cx="120" cy="242" r="7" fill="#e0a34a"/>
+            <circle cx="144" cy="242" r="7" fill="#4a8a72"/>
+            <rect x="78" y="292" width="160" height="14" rx="3" fill="#3a424f"/>
+            <rect x="78" y="318" width="110" height="14" rx="3" fill="#3a424f"/>
+            <!-- 传送带 -->
+            <rect x="236" y="330" width="140" height="18" rx="9" fill="#39414d"/>
+            <circle cx="258" cy="339" r="5" fill="#222932"/>
+            <circle cx="300" cy="339" r="5" fill="#222932"/>
+            <circle cx="342" cy="339" r="5" fill="#222932"/>
+            <!-- 产品件 -->
+            <rect x="262" y="300" width="34" height="30" rx="4" fill="#d8b678"/>
+            <rect x="316" y="300" width="34" height="30" rx="4" fill="#c0392b"/>
+            <!-- 三角架 -->
+            <g stroke="#5e6878" stroke-width="4" stroke-linecap="round">
+              <line x1="470" y1="404" x2="492" y2="300"/>
+              <line x1="514" y1="404" x2="492" y2="300"/>
+              <line x1="492" y1="404" x2="492" y2="300"/>
+            </g>
+            <!-- 摄影机 -->
+            <rect x="456" y="262" width="72" height="42" rx="7" fill="#232a34"/>
+            <rect x="470" y="272" width="34" height="22" rx="3" fill="#0f141b"/>
+            <circle cx="512" cy="283" r="8" fill="#c0392b"/>
+            <path d="M528 274l26-12v42l-26-12z" fill="#2e3642"/>
+            <!-- 取景框角标 -->
+            <g stroke="#f6f2ea" stroke-width="2" opacity=".55" fill="none">
+              <path d="M28 28h30M28 28v30"/>
+              <path d="M612 28h-30M612 28v30"/>
+              <path d="M28 460h30M28 460v-30"/>
+              <path d="M612 460h-30M612 460v-30"/>
+            </g>
+            <!-- 焦点十字 -->
+            <g stroke="#f6f2ea" opacity=".35" stroke-width="1.2">
+              <line x1="320" y1="180" x2="320" y2="206"/>
+              <line x1="320" y1="234" x2="320" y2="260"/>
+              <line x1="294" y1="220" x2="307" y2="220"/>
+              <line x1="333" y1="220" x2="346" y2="220"/>
+            </g>
+            <text x="322" y="172" fill="#f6f2ea" opacity=".4" font-size="11" letter-spacing="2" text-anchor="middle">FOCUS</text>
+          </svg>
+        </div>
+        <div class="takes-card">
+          <div class="t">本周新入库操拍</div>
+          <div class="v">A类镜头 42 条</div>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>车间即片场</span>
+      <span>一台机器一个主角</span>
+      <span>真实光线优先</span>
+      <span>国品故事档案</span>
+      <span>操拍方法论</span>
+      <span>厂牌共创计划</span>
+      <span>车间即片场</span>
+      <span>一台机器一个主角</span>
+      <span>真实光线优先</span>
+      <span>国品故事档案</span>
+      <span>操拍方法论</span>
+      <span>厂牌共创计划</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Why Guopin Shoot</span>
+        <h2 class="sec-title">国货不缺好产品<br>缺的是被认真拍下来的那一刻</h2>
+        <p class="sec-lead">
+          久产国品操拍诞生于一群纪录片导演与制造业观察者的合作。
+          我们看到的现实是：许多国货品牌的品质早已达到世界水平，
+          但它们的影像语言仍停留在产品图与口播广告。
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            我们把“操拍”定义为一种工作方法：<strong>先理解产线，再设计镜头</strong>。
+            在开拍之前，创作者要走进车间，看原料如何入库、模具如何调试、
+            质检如何抽检、包装如何封箱。只有理解了这些，镜头才不会说谎。
+          </p>
+          <p>
+            平台上的每一支作品，都附带一份<strong>操拍手记</strong>：用了什么焦段、
+            车间照度是多少、如何在不停线的条件下完成一条长镜头、
+            又如何在噪音环境里录下机器的呼吸声。这些手记是开源的，
+            任何品牌与创作者都可以检索、复用、再迭代。
+          </p>
+          <p>
+            我们不做“看起来高级”的空镜，我们做<strong>可以追溯的影像</strong>。
+            每一条素材都能对应到一个工位、一位师傅、一道工序。
+            当消费者看到这些画面时，他们看到的不只是广告，
+            而是一整条产业链的诚实。
+          </p>
+        </div>
+
+        <div class="pillars reveal">
+          <div class="pillar">
+            <div class="num">壹</div>
+            <div>
+              <h4>真实产线优先</h4>
+              <p>拒绝棚拍式的完美摆拍，全部作品需在真实作业环境中完成主体拍摄。</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="num">贰</div>
+            <div>
+              <h4>开源操拍手记</h4>
+              <p>参数、布光、收音、剪辑思路全部公开，让经验成为行业公共资产。</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="num">叁</div>
+            <div>
+              <h4>品牌与创作者共评</h4>
+              <p>作品由品牌方与社区创作者双向打分，避免自说自话的审美闭环。</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="num">肆</div>
+            <div>
+              <h4>长期档案库</h4>
+              <p>持续收录不同年份的同一产品影像，形成可对比的国品时间轴。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section id="studio" class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Shoot Studio</span>
+        <h2 class="sec-title">操拍工坊 · 本期开放选题</h2>
+        <p class="sec-lead">
+          每期开放若干条具体到工序的拍摄任务，创作者可直接认领选题，
+          品牌方提供进场许可与技术支持，最终成片进入平台展映。
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">轻工制造</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#232a34"/>
+              <rect x="40" y="150" width="320" height="16" rx="8" fill="#3a424f"/>
+              <circle cx="80" cy="158" r="6" fill="#1a2028"/>
+              <circle cx="150" cy="158" r="6" fill="#1a2028"/>
+              <circle cx="220" cy="158" r="6" fill="#1a2028"/>
+              <circle cx="290" cy="158" r="6" fill="#1a2028"/>
+              <rect x="96" y="108" width="46" height="42" rx="5" fill="#d8b678"/>
+              <rect x="172" y="108" width="46" height="42" rx="5" fill="#c0392b"/>
+              <rect x="248" y="108" width="46" height="42" rx="5" fill="#4a8a72"/>
+              <polygon points="340,40 380,40 380,110 340,110" fill="#e0a34a" opacity=".16"/>
+              <g stroke="#e0a34a" stroke-width="2" opacity=".4">
+                <line x1="340" y1="60" x2="380" y2="60"/>
+                <line x1="340" y1="85" x2="380" y2="85"/>
+              </g>
+              <text x="200" y="225" fill="#8b94a1" font-size="11" letter-spacing="3" text-anchor="middle">LINE · A</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>一条传送带的一生</h3>
+            <p>用 90 秒跟拍一件产品从注塑到装箱的全过程，要求不停线、单机位、自然光为主。</p>
+            <div class="card-meta"><span class="who">已认领 · 3 位导演</span><span>剩余席位 2</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">手作技艺</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#262b30"/>
+              <rect x="60" y="160" width="280" height="10" rx="5" fill="#3d444e"/>
+              <circle cx="140" cy="120" r="34" fill="none" stroke="#d8b678" stroke-width="3"/>
+              <circle cx="140" cy="120" r="18" fill="none" stroke="#c0392b" stroke-width="2" opacity=".7"/>
+              <path d="M200 90 q40 20 0 60" stroke="#8b94a1" stroke-width="2" fill="none"/>
+              <rect x="238" y="96" width="60" height="70" rx="6" fill="#1d2229" stroke="#3d444e"/>
+              <circle cx="268" cy="116" r="5" fill="#e0a34a"/>
+              <line x1="248" y1="140" x2="288" y2="140" stroke="#3d444e" stroke-width="2"/>
+              <line x1="248" y1="152" x2="276" y2="152" stroke="#3d444e" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>老师傅的最后一把刻刀</h3>
+            <p>记录一位从业三十年的手工匠人与他工具箱的细节，重点在手的动作与工具的磨损痕迹。</p>
+            <div class="card-meta"><span class="who">已认领 · 5 位导演</span><span>剩余席位 0</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">食品工艺</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#2a2622"/>
+              <ellipse cx="200" cy="190" rx="130" ry="22" fill="#1b1815"/>
+              <rect x="110" y="86" width="180" height="110" rx="12" fill="#3a332c"/>
+              <rect x="130" y="106" width="140" height="60" rx="6" fill="#1a1714"/>
+              <circle cx="200" cy="136" r="18" fill="#e0a34a" opacity=".85"/>
+              <path d="M120 208 q80 -30 160 0" stroke="#c0392b" stroke-width="3" fill="none" opacity=".6"/>
+              <g fill="#d8b678" opacity=".7">
+                <circle cx="160" cy="196" r="3"/>
+                <circle cx="200" cy="200" r="3"/>
+                <circle cx="240" cy="196" r="3"/>
+              </g>
+              <rect x="286" y="120" width="8" height="80" rx="4" fill="#4a423a"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>一口锅的火候曲线</h3>
+            <p>围绕温度与时间做文章：拍摄食材在锅中变化的 8 个关键节点，用特写串成节奏。</p>
+            <div class="card-meta"><span class="who">已认领 · 7 位导演</span><span>剩余席位 1</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">电子装配</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#1e242c"/>
+              <rect x="50" y="70" width="300" height="150" rx="8" fill="#252d37" stroke="#3a424f"/>
+              <g stroke="#3a424f" stroke-width="1.4">
+                <line x1="80" y1="100" x2="320" y2="100"/>
+                <line x1="80" y1="130" x2="320" y2="130"/>
+                <line x1="80" y1="160" x2="320" y2="160"/>
+              </g>
+              <rect x="96" y="88" width="52" height="24" rx="3" fill="#4a8a72" opacity=".8"/>
+              <rect x="170" y="118" width="72" height="24" rx="3" fill="#c0392b" opacity=".8"/>
+              <rect x="256" y="148" width="44" height="24" rx="3" fill="#d8b678" opacity=".8"/>
+              <circle cx="120" cy="180" r="4" fill="#e0a34a"/>
+              <circle cx="160" cy="180" r="4" fill="#e0a34a"/>
+              <circle cx="200" cy="180" r="4" fill="#e0a34a"/>
+              <circle cx="240" cy="180" r="4" fill="#e0a34a"/>
+              <path d="M330 40 l30 0 l0 30" stroke="#f6f2ea" stroke-width="2" fill="none" opacity=".4"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>毫米之间：主板质检</h3>
+            <p>镜头贴近焊点与检测仪器，用微距与高速摄影呈现一块主板通过的每一道检验。</p>
+            <div class="card-meta"><span class="who">已认领 · 2 位导演</span><span>剩余席位 3</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">纺织服装</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#24262b"/>
+              <g stroke="#4a5058" stroke-width="2">
+                <line x1="60" y1="60" x2="60" y2="200"/>
+                <line x1="340" y1="60" x2="340" y2="200"/>
+                <line x1="60" y1="80" x2="340" y2="80"/>
+              </g>
+              <g stroke="#d8b678" stroke-width="1.2" opacity=".75">
+                <path d="M80 80 q20 60 0 110"/>
+                <path d="M120 80 q20 60 0 110"/>
+                <path d="M160 80 q20 60 0 110"/>
+                <path d="M200 80 q20 60 0 110"/>
+                <path d="M240 80 q20 60 0 110"/>
+                <path d="M280 80 q20 60 0 110"/>
+                <path d="M320 80 q20 60 0 110"/>
+              </g>
+              <rect x="150" y="150" width="100" height="46" rx="4" fill="#c0392b" opacity=".55"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>一匹布的经纬叙事</h3>
+            <p>以织机节奏为剪辑点，把一根纱线的运动拍成有韵律的视觉段落，突出质感与光线。</p>
+            <div class="card-meta"><span class="who">已认领 · 4 位导演</span><span>剩余席位 1</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-media">
+            <span class="card-tag">品牌档案</span>
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="#22262d"/>
+              <rect x="70" y="50" width="120" height="150" rx="4" fill="#2e3540" stroke="#46505c"/>
+              <rect x="210" y="70" width="120" height="130" rx="4" fill="#2e3540" stroke="#46505c"/>
+              <g stroke="#8b94a1" stroke-width="1.6" opacity=".6">
+                <line x1="88" y1="76" x2="172" y2="76"/>
+                <line x1="88" y1="96" x2="172" y2="96"/>
+                <line x1="88" y1="116" x2="150" y2="116"/>
+                <line x1="228" y1="96" x2="312" y2="96"/>
+                <line x1="228" y1="116" x2="312" y2="116"/>
+                <line x1="228" y1="136" x2="290" y2="136"/>
+              </g>
+              <circle cx="280" cy="170" r="16" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+              <path d="M272 170 l6 6 l12 -14" stroke="#c0392b" stroke-width="2.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>老厂志：三十年影像对照</h3>
+            <p>寻找同一厂区不同年代的老照片与旧录像，与当下画面做并置剪辑，建立时间纵深。</p>
+            <div class="card-meta"><span class="who">已认领 · 1 位导演</span><span>剩余席位 4</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How We Shoot</span>
+        <h2 class="sec-title">从踏勘到展映，一条完整的操拍链路</h2>
+        <p class="sec-lead">平台把一次品牌影像合作拆成可复用的四个阶段，每个阶段都有对应的文档模板与验收标准。</p>
+      </div>
+      <div class="process">
+        <div class="step reveal">
+          <h4>进场踏勘</h4>
+          <p>记录车间照度、动线、噪音源与安全规范，输出一份可执行的拍摄平面图。</p>
+        </div>
+        <div class="step reveal">
+          <h4>镜头设计</h4>
+          <p>围绕工序节点设计镜头表，明确每个镜头要证明的品质事实，而非仅仅好看。</p>
+        </div>
+        <div class="step reveal">
+          <h4>实拍执行</h4>
+          <p>在不干扰生产的前提下完成主体拍摄，同步采集环境声与工人同期声。</p>
+        </div>
+        <div class="step reveal">
+          <h4>展映归档</h4>
+          <p>成片进入平台展映，操拍手记归档入库，供品牌与创作者长期检索复用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works" class="band">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Screening Room</span>
+        <h2 class="sec-title">作品展映 · 本季精选</h2>
+        <p class="sec-lead">所有展映作品均可在详情页查看完整操拍手记与原始镜头表，欢迎对照学习。</p>
+      </div>
+      <div class="works-grid">
+        <a class="work reveal" href="#works" aria-label="作品：钢的体温">
+          <svg viewBox="0 0 300 400" aria-hidden="true">
+            <rect width="300" height="400" fill="#1d232b"/>
+            <rect x="40" y="120" width="220" height="140" rx="6" fill="#2b333e"/>
+            <rect x="60" y="150" width="80" height="80" rx="4" fill="#c0392b" opacity=".8"/>
+            <circle cx="200" cy="190" r="34" fill="none" stroke="#e0a34a" stroke-width="3" opacity=".7"/>
+            <line x1="40" y1="290" x2="260" y2="290" stroke="#3a424f" stroke-width="3"/>
+          </svg>
+          <div class="work-info"><b>钢的体温</b><span>五金 · 03:42</span></div>
+        </a>
+        <a class="work reveal" href="#works" aria-label="作品：线头">
+          <svg viewBox="0 0 300 400" aria-hidden="true">
+            <rect width="300" height="400" fill="#262329"/>
+            <g stroke="#d8b678" stroke-width="1.4" opacity=".8">
+              <path d="M50 80 q40 120 0 240"/>
+              <path d="M90 80 q40 120 0 240"/>
+              <path d="M130 80 q40 120 0 240"/>
+              <path d="M170 80 q40 120 0 240"/>
+              <path d="M210 80 q40 120 0 240"/>
+              <path d="M250 80 q40 120 0 240"/>
+            </g>
+            <circle cx="150" cy="200" r="46" fill="none" stroke="#c0392b" stroke-width="3"/>
+          </svg>
+          <div class="work-info"><b>线头</b><span>纺织 · 05:10</span></div>
+        </a>
+        <a class="work reveal" href="#works" aria-label="作品：零点四毫米">
+          <svg viewBox="0 0 300 400" aria-hidden="true">
+            <rect width="300" height="400" fill="#1e242b"/>
+            <rect x="40" y="140" width="220" height="120" rx="8" fill="#29313b"/>
+            <g stroke="#4a8a72" stroke-width="2">
+              <line x1="70" y1="170" x2="230" y2="170"/>
+              <line x1="70" y1="200" x2="180" y2="200"/>
+              <line x1="70" y1="230" x2="210" y2="230"/>
+            </g>
+            <circle cx="230" cy="230" r="10" fill="#e0a34a"/>
+          </svg>
+          <div class="work-info"><b>零点四毫米</b><span>电子 · 04:05</span></div>
+        </a>
+        <a class="work reveal" href="#works" aria-label="作品：慢火">
+          <svg viewBox="0 0 300 400" aria-hidden="true">
+            <rect width="300" height="400" fill="#2a2420"/>
+            <ellipse cx="150" cy="270" rx="90" ry="26" fill="#1b1713"/>
+            <rect x="80" y="170" width="140" height="90" rx="10" fill="#3a332c"/>
+            <circle cx="150" cy="212" r="24" fill="#e0a34a" opacity=".85"/>
+            <path d="M110 130 q20 -30 40 0" stroke="#c0392b" stroke-width="3" fill="none" opacity=".6"/>
+            <path d="M150 130 q20 -30 40 0" stroke="#c0392b" stroke-width="3" fill="none" opacity=".6"/>
+          </svg>
+          <div class="work-info"><b>慢火</b><span>食品 · 06:28</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="numbers">
+    <div class="wrap num-grid">
+      <div class="num-item"><b>12,400</b><span>注册操拍创作者</span></div>
+      <div class="num-item"><b>680</b><span>开源操拍手记</span></div>
+      <div class="num-item"><b>94%</b><span>品牌复约率</span></div>
+      <div class="num-item"><b>27 省</b><span>已踏勘厂区覆盖</span></div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Community</span>
+        <h2 class="sec-title">创作者社区 · 正在发生</h2>
+        <p class="sec-lead">这里的讨论围绕具体镜头展开：用哪支定焦、怎么规避频闪、如何在不打扰师傅的情况下收音。</p>
+      </div>
+      <div class="community-grid">
+        <div class="reveal">
+          <div class="thread">
+            <div class="avatar" style="background:#c0392b">林</div>
+            <div>
+              <h5>车间的日光灯频闪怎么解决？</h5>
+              <p>分享一个低成本方案：把快门设在 1/50 并配合 ND 滤镜，附前后对比截图。</p>
+              <span class="time">3 小时前 · 12 条回复</span>
+            </div>
+          </div>
+          <div class="thread">
+            <div class="avatar" style="background:#3f6b5a">周</div>
+            <div>
+              <h5>《一匹布的经纬叙事》操拍手记已归档</h5>
+              <p>完整镜头表、现场照度记录与声音采集参数全部公开，欢迎对照复现。</p>
+              <span class="time">8 小时前 · 34 条回复</span>
+            </div>
+          </div>
+          <div class="thread">
+            <div class="avatar" style="background:#b8893b">陈</div>
+            <div>
+              <h5>关于“不完美镜头”的边界讨论</h5>
+              <p>真实产线一定会有瑕疵，什么程度的瑕疵应该被保留？聊聊你的判断标准。</p>
+              <span class="time">昨天 · 51 条回复</span>
+            </div>
+          </div>
+          <div class="thread">
+            <div class="avatar" style="background:#5b5f8a">何</div>
+            <div>
+              <h5>寻找华南地区食品产线合作品牌</h5>
+              <p>个人创作者，擅长微距与自然光，希望长期跟拍一条产线，接受低成本起步。</p>
+              <span class="time">2 天前 · 17 条回复</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="join-card reveal">
+          <h3>成为操拍共创者</h3>
+          <p>无论你是导演、摄影、剪辑还是品牌主理人，只要认同“真实产线优先”，这里都有你的位置。</p>
+          <ul class="join-list">
+            <li>获取持续更新的操拍选题库</li>
+            <li>下载标准化踏勘与镜头表模板</li>
+            <li>参与年度国品影像档案共建</li>
+            <li>优先对接品牌方缩短沟通链路</li>
+          </ul>
+          <a class="btn btn-primary" href="#subscribe">申请加入社区</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="band">
+    <div class="wrap" style="max-width:900px">
+      <div class="sec-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="sec-title">常见问题</h2>
+      </div>
+      <div class="reveal">
+        <div class="faq-item">
+          <button class="faq-q" type="button">久产国品操拍是品牌方还是创作平台？<span class="ic">+</span></button>
+          <div class="faq-a"><p>两者都有。平台本身由一支纪录片团队发起，负责制定操拍标准与维护档案库；同时我们与品牌方合作产出作品。核心原则是：影像的现场判断权归创作者，事实校验权归品牌方。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">没有专业器材可以参与吗？<span class="ic">+</span></button>
+          <div class="faq-a"><p>可以。我们更看重你是否理解产线。很多入选作品使用微单甚至手机完成，关键在于镜头设计是否准确传达了品质事实。平台提供器材借用与拍摄方案评估。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">品牌方如何发起合作？<span class="ic">+</span></button>
+          <div class="faq-a"><p>提交产品与产线信息后，平台会安排踏勘、输出拍摄方案，并从社区匹配导演。整个流程从踏勘到成片展映通常需要四到八周，具体取决于产线复杂度。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">操拍手记为什么全部开源？<span class="ic">+</span></button>
+          <div class="faq-a"><p>因为经验一旦封闭就会快速失效。开源手记让新人可以站在前人基础上迭代，也让品牌方看清影像背后的工程思维，从而提升整个行业的影像水准。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">作品版权归属如何界定？<span class="ic">+</span></button>
+          <div class="faq-a"><p>品牌方获得约定的商业使用权，创作者保留署名权与作品集展示权，平台获得展映与档案归档权。所有条款在开工前以书面形式确认，避免后续争议。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <div class="wrap">
+    <div class="subscribe reveal" id="subscribe">
+      <h2>把下一条国品故事，拍下来</h2>
+      <p>留下邮箱，接收每月操拍选题、开源手记与社区活动通知。不打扰，只给干货。</p>
+      <form class="sub-form" id="subForm" novalidate>
+        <input type="email" id="subEmail" placeholder="你的邮箱地址" aria-label="邮箱地址">
+        <button type="submit">订阅</button>
+      </form>
+      <div class="sub-msg" id="subMsg" aria-live="polite"></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand-name" style="color:#fff">久产国品操拍</span>
+        <p>以真实产线为片场，记录中国制造的品质时刻。开源操拍方法，共建可追溯的国品影像档案。</p>
+      </div>
+      <div class="foot-col">
+        <h6>平台</h6>
+        <a href="#about">关于我们</a>
+        <a href="#studio">操拍工坊</a>
+        <a href="#works">作品展映</a>
+        <a href="#community">创作者社区</a>
+      </div>
+      <div class="foot-col">
+        <h6>资源</h6>
+        <a href="#faq">常见问题</a>
+        <a href="#process">操拍流程</a>
+        <a href="#community">开源手记</a>
+        <a href="#subscribe">订阅通讯</a>
+      </div>
+      <div class="foot-col">
+        <h6>联系</h6>
+        <a href="#subscribe">品牌合作</a>
+        <a href="#subscribe">创作者入驻</a>
+        <a href="#faq">媒体咨询</a>
+        <a href="#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 久产国品操拍 · 保留所有权利</span>
+      <span>拍真实的中国品质</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 滚动显现
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('in');});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  })();
+
+  // FAQ 手风琴
+  (function(){
+    var items = document.querySelectorAll('.faq-item');
+    items.forEach(function(item){
+      var btn = item.querySelector('.faq-q');
+      var ans = item.querySelector('.faq-a');
+      btn.addEventListener('click',function(){
+        var isOpen = item.classList.contains('open');
+        items.forEach(function(other){
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = '0px';
+        });
+        if(!isOpen){
+          item.classList.add('open');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  })();
+
+  // 订阅表单
+  (function(){
+    var form = document.getElementById('subForm');
+    var email = document.getElementById('subEmail');
+    var msg = document.getElementById('subMsg');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var v = email.value.trim();
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+      if(!ok){
+        msg.textContent = '请输入有效的邮箱地址，我们会用它发送操拍选题。';
+        msg.style.color = '#ffe0d8';
+        email.focus();
+        return;
+      }
+      msg.textContent = '订阅成功，下一期操拍选题将发送至 ' + v + '。';
+      msg.style.color = '#fff';
+      form.reset();
+    });
+  })();
+
+  // 时钟式滚动提示：让顶部导航在小屏仍然可用
+  (function(){
+    var cta = document.querySelector('.nav-cta');
+    if(!cta) return;
+    cta.addEventListener('click',function(e){
+      var target = document.getElementById('subscribe');
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth',block:'center'});
+        setTimeout(function(){
+          var input = document.getElementById('subEmail');
+          if(input) input.focus({preventScroll:true});
+        },600);
+      }
+    });
+  })();
+</script>
+</body>
+                </html>
